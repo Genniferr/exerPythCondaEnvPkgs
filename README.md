@@ -37,34 +37,55 @@
 
 |   Concept   |         Description or short answer         |
 |     ---     |                     ---                     |
-|What is the purpose of having different environments?     |(enter description or short answer here)|
-|What is the default package manager in Python?            |(enter description or short answer here)|
-|How do you manage environments and packages in Anaconda?  |(enter description or short answer here)|
-|`conda list`       |(enter description or short answer here)|
-|`conda env list`       |(enter description or short answer here)|
-|How do you keep your base environment unchanged?       |(enter description or short answer here)|
-|What is the link to the Conda cheat sheet? (link in video notes is broken)      |(enter description or short answer here)|
-|`conda create --name XXXX`       |(enter description or short answer here)|
-|`source activate XXXX`       |(enter description or short answer here)|
-|`conda install YYYY`       |(enter description or short answer here)|
-|channels in Conda       |(enter description or short answer here)|
-|`conda install -c ZZZZ YYYY`       |(enter description or short answer here)|
-|`conda config --show channels`       |(enter description or short answer here)|
-|`conda config --add channels ZZZZ`       |(enter description or short answer here)|
-|conda-forge.org       |(enter description or short answer here)|
-|`source deactivate`       |(enter description or short answer here)|
-|`conda config --get channels`       |(enter description or short answer here)|
+|What is the purpose of having different environments?     |Each environment is for different projects and python applications|
+|What is the default package manager in Python?            |pip, python's integrated package manager|
+|How do you manage environments and packages in Anaconda?  |Virutalenv or Conda|
+|`conda list`       |all the default packages included and installed with anaconda, long list|
+|`conda env list`       |a list of the environments we have installed|
+|How do you keep your base environment unchanged?       |by creating new environments in which to house new packages|
+|What is the link to the Conda cheat sheet? (link in video notes is broken)      |https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf|
+|`conda create --name XXXX`       |to create and name a new environment|
+|`source activate XXXX`       |this activates and lets you to be able to work within a specific env|
+|`conda install YYYY`       |this installs packages that are not there by default|
+|channels in Conda       |the location where Conda looks for the packages you want to install|
+|`conda install -c ZZZZ YYYY`       |this installs packages from a specific channel, one time|
+|`conda config --show channels`       |shows the channels you have|
+|`conda config --add channels ZZZZ`       |add channels to be available by default in Conda|
+|conda-forge.org       |a channel of python packages that is a community led collection|
+|`source deactivate`       |brings you back to base channel|
+|`conda config --get channels`       |you can see the priority of the channels|
 
 * After creating the environments he created in the video on your computer, what would the results of running the command `conda env list` look like with the da35 environment activated. Paste the output from your command prompt in the code block below.
 
 ```
-#Paste your results here.
+(da35) Macintosh:da35 genniferrubin$ conda list
+# packages in environment at /Users/genniferrubin/opt/anaconda3/envs/da35:
+#
+# Name                    Version                   Build  Channel
+ca-certificates           2020.7.22                     0  
+certifi                   2018.8.24                py35_1  
+libcxx                    10.0.0                        1  
+libedit                   3.1.20191231         h1de35cc_1  
+libffi                    3.2.1                h0a44026_6  
+ncurses                   6.2                  h0a44026_1  
+openssl                   1.0.2u               h1de35cc_0  
+pip                       10.0.1                   py35_0  
+python                    3.5.6                hc167b69_0  
+readline                  7.0                  h1de35cc_5  
+setuptools                40.2.0                   py35_0  
+sqlite                    3.33.0               hffcf06c_0  
+tk                        8.6.10               hb0a8c7a_0  
+wheel                     0.35.1                     py_0  
+xz                        5.2.5                h1de35cc_0  
+zlib                      1.2.11               h1de35cc_3  
+(da35) Macintosh:da35 genniferrubin$ 
+
 
 
 ```
 * What command would you use to remove the environments you created for this exercise from your computer?
 
 ```
-#Type the command here.
+conda env remove --name [env name]
 
 ```
